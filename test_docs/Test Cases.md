@@ -17,8 +17,8 @@
   - [TC_223 - Logging in with an invalid username and password](#tc_223)
   - [TC_230 - API call with a valid ISBN can add a book to the booklist](#tc_230)
   - [TC_231 - API call adding multiple books to the booklist](#tc_231)
-  - [TC_232 - API call with a invalid ISBN to add a book to the booklist](#tc_232)
-  - [TC_233 - API call adding the same book multiple times](#tc_233)
+  - [TC_232 - API call with a invalid ISBN trying to add a book to the booklist](#tc_232)
+  - [TC_233 - API call for adding duplicate ISBN ignored](#tc_233)
 ---
 
 ## User Story 1: Guest Access
