@@ -9,15 +9,17 @@
   - [TC_120 - Clicking on a book returns more info](#tc_120)
   - [TC_121 - API call for a specific book](#tc_121)
 - [User Story 2: User Account Features](#user-story-2-user-account-features)
-  - [TC_200 - Signup creates user](#tc_200)
-  - [TC_210 - Login gives token](#tc_210)
-  - [TC_211 - Authorization returns true](#tc_211)
-  - [TC_230 - Add book with valid ISBN](#tc_230)
-  - [TC_231 - Invalid ISBN fails](#tc_231)
-  - [TC_232 - Duplicate ISBN ignored](#tc_232)
-  - [TC_233 - Delete specific book](#tc_233)
-  - [TC_234 - Delete all books](#tc_234)
-
+  - [TC_210 - Signing up with an invalid username or password](#tc_210)
+  - [TC_211 - Signing up with an already used username](#tc_211)
+  - [TC_220 - Logging with a valid username and password](#tc_220)
+  - [TC_221 - API call with a valid username and password](#tc_221)
+  - [TC_222 - API call with an invalid username or password](#tc_222)
+  - [TC_223 - Logging in with an invalid username and password](#tc_223)
+  - [TC_230 - Inserting a valid ISBN results to booklist](#tc_230)
+  - [TC_231 - API call with a valid ISBN can add a book to the booklist](#tc_231)
+  - [TC_232 - API call adding multiple books to the booklist](#tc_232)
+  - [TC_233 - API call with a invalid ISBN to add a book to the booklist](#tc_233)
+  - [TC_234 - API call adding the same book multiple times](#tc_234)
 ---
 
 ## User Story 1: Guest Access
@@ -33,19 +35,19 @@
 
 ### TC_111 - Typing partial match returns filtered result
 
-- **Precondition:** User is on the bookstore page
+- **Precondition:** User is on the [bookstore page](https://demoqa.com/books)
 - **Steps:**
   1. Type a partial book name like “Java” in the search bar
 - **Expected Result:** The book list filters dynamically to show all matches with “Java” in the title
 
 ---
 
-### TC_112 - Typing partial match returns filtered result ###############################################################################################
+### TC_112 - API call searching for a book with an invalid ISBN
 
-- **Precondition:** User is on the bookstore page
+- **Precondition:** Choose an invalid ISBN (e.g. '1234567')
 - **Steps:**
-  1. Type a partial book name like “Java” in the search bar
-- **Expected Result:** The book list filters dynamically to show all matches with “Java” in the title
+  1. Send a `GET` request to `https://demoqa.com/BookStore/v1/Book?ISBN=1234567`
+- **Expected Result:** Server responds with `404 Not Found`
 
 ---
 
@@ -70,9 +72,9 @@
 
 ## User Story 2: User Account Features
 
-### TC_200 - Signup creates user
+### TC_210 - Signing up with an invalid username or password
 
-- **Precondition:** User is not already registered
+- **Precondition:** invalid username and password 
 - **Steps:**
   1. Send a `POST` request to `https://demoqa.com/Account/v1/User`  
      Body:

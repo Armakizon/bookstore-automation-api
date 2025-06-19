@@ -3,14 +3,15 @@ TC_120,clicking on a book returns more info about it,user sent to the correct si
 TC_121,API call for a specific book,JSON with more info about the book,API
 TC_110,Typing full book title shows correct result,the search function filters all the books and shows the correct one,Web
 TC_111,Typing partial match of a book name returns filtered results,the search function filters the books and shows all results that can fit,Web
-TC_230,inserting a valid ISBN results in book added to user booklist,booklist get modified,Web
+TC_230,Inserting a valid ISBN results to booklist,booklist get modified,Web
 TC_231,API call with a valid ISBN can add a book to the booklist,JSON 200OK and the booklist get modified,API
-TC_232,API call with a valid ISBNs can add multiple books to the booklist,JSON 200OK and the booklist get modified,API
+TC_232,API call adding multiple books to the booklist,JSON 200OK and the booklist get modified,API
 TC_210,Signing up with an invalid username or password,Error message,Web
 TC_220,logging with a valid username and password,the user should be able to access the page as a user,Web
 TC_221,API call with valid username and password,200OK and an Auth token,API
-TC_210,Signing up with an already used username,Error message,Web
+TC_211,Signing up with an already used username,Error message,Web
 TC_222,API call with invalid username and password,Error,API
-TC_223,API call with invalid username and password,Getting sent back to the login page with an error message,Web
+TC_223,Logging in with an invalid username and password,Getting sent back to the login page with an error message,Web
 TC_112,API call searching for a book with an invalid ISBN,Error 404 ,API
 TC_233,API call with a invalid ISBN to add a book to the booklist,Error 404 ,API
+TC_234,API call adding the same book multiple times,Book get added once,API
