@@ -28,5 +28,6 @@ And API testing of whichever endpoints available within the scope noted above
 4. Write test cases 
 5. Automate API tests (Postman or Python requests)
 6. Automate UI tests (Selenium for key flows)
-7. Run and document results (screenshots + logs)
+7. Run and document results
 8. Create bug reports for issues found in the site or in the API
+9. Write a test completion report
