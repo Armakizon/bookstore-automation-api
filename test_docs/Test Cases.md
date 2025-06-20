@@ -18,8 +18,7 @@
   - [TC_230 - API call with a valid ISBN can add a book to the booklist](#tc_230---api-call-with-a-valid-isbn-can-add-a-book-to-the-booklist)
   - [TC_231 - API call adding multiple books to the booklist](#tc_231---api-call-adding-multiple-books-to-the-booklist)
   - [TC_232 - API call with a invalid ISBN trying to add a book to the booklist](#tc_232---api-call-with-a-invalid-isbn-trying-to-add-a-book-to-the-booklist)
-  - [TC_233 - API call for adding duplicate ISBN ignored](#tc_233---api-call-adding-multiple-books-to-the-booklist)
-  - [TC_232 - Duplicate ISBN ignored](#tc_232---duplicate-isbn-ignored)
+  - [TC_233 - Duplicate ISBN ignored](#tc_233---duplicate-isbn-ignored)
 ---
 
 ## User Story 1: Guest Access
@@ -49,7 +48,7 @@
 - **Precondition:** Choose an invalid ISBN (e.g. '1234567')
 - **Steps:**
   1. Send a `GET` request to `https://demoqa.com/BookStore/v1/Book?ISBN=1234567`
-- **Expected Result:** Server responds with `404 Not Found`
+- **Expected Result:** Server responds with `400 Not Found`
 
 ---
 
@@ -205,24 +204,9 @@
        "collectionOfIsbns": [{ "isbn": "123456" }]
      }
      ```
-- **Expected Result:** Response `404 Not found`, and the booklist is unchanged
+- **Expected Result:** Response `400 Not found`, and the booklist is unchanged
 
-### TC_233 - API call adding multiple books to the booklist
-
-- **Precondition:** User has valid token, userId and valid ISBNs
-- **Steps:**
-  1. Send a `POST` request to `https://demoqa.com/BookStore/v1/Books`  
-     Headers: `Authorization: Bearer <token>`  
-     Body:
-     ```json
-     {
-       "userId": "<userId>",
-       "collectionOfIsbns": [{ "isbn": "9781449325862" },{ "isbn": "9781449331818" }]
-     }
-     ```
-- **Expected Result:** Response `200 OK`, and the books are added to the user’s collection
-
-### TC_232 - Duplicate ISBN ignored
+### TC_233 - Duplicate ISBN ignored
 
 - **Precondition:** User has valid token, userId and valid ISBN that was already added to the booklist (e.g. 9781449331818)
 - **Steps:**

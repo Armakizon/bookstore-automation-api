@@ -11,6 +11,6 @@ TC_221,API call with valid username and password,200OK and an Auth token,API,v
 TC_211,Signing up with an already used username,Error message,Web,x
 TC_222,API call with invalid username and password,Error,API,v
 TC_223,Logging in with an invalid username and password,Getting sent back to the login page with an error message,Web,v
-TC_112,API call searching for a book with an invalid ISBN,Error 404 ,API,v
-TC_232,API call with a invalid ISBN trying to add a book to the booklist,Error 404 ,API,v
+TC_112,API call searching for a book with an invalid ISBN,Error 400,API,v
+TC_232,API call with a invalid ISBN trying to add a book to the booklist,Error 400,API,v
 TC_233,API call for adding duplicate ISBN ignored,Book get added once,API,v
