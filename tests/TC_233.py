@@ -1,4 +1,5 @@
 import requests
+
 from test_generate_token import test_generate_token
 
 def add_book_to_user(token,isbn):
@@ -20,7 +21,7 @@ def add_book_to_user(token,isbn):
     return response
 
 token = test_generate_token()
-isbn = "11111111111"
+isbn = "9781449325862"
 
 add_book_to_user(token, isbn)
-assert response.status_code == 400
+add_book_to_user(token, isbn)

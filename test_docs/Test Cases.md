@@ -219,5 +219,5 @@
        "collectionOfIsbns": [{ "isbn": "123456" }]
      }
      ```
-- **Expected Result:** Server returns error (`400 Bad Request`) and no book is added
+- **Expected Result:** Server returns error (`400 Bad Request`) and no modifitcation to the booklist
 ---
