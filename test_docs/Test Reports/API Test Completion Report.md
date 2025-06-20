@@ -48,7 +48,8 @@ This report will be different from usual test report, since the focus is on crea
 - Enhance API to return user ID on token validation or provide dedicated user info endpoint.
 
 ## 11. Conclusion  
-The core functionalities of user authentication and book addition are working as expected. However, issues with user ID retrieval and book deletion require resolution before full test automation can be implemented.
+The core functionalities of user authentication and book addition are working as expected. However, issues with user ID retrieval and book deletion require resolution before full test automation can be implemented.\
+For now you can workaround the problem by signing in and out and manually deleting the booklist through the site, however full automation is currently impossible.
 
 ## 12. Appendix  
 - Test data:  
