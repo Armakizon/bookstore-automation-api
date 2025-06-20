@@ -31,3 +31,5 @@ And API testing of whichever endpoints available within the scope noted above
 7. Run and document results
 8. Create bug reports for issues found in the site or in the API
 9. Write a test completion report
+10. Write retrospective
+11. Write readme
