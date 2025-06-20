@@ -1,6 +1,6 @@
 import requests
 
-from test_generate_token import test_generate_token
+from generate_token import generate_token
 
 def add_book_to_user(token,isbn):
     url = "https://demoqa.com/BookStore/v1/Books"
@@ -20,7 +20,7 @@ def add_book_to_user(token,isbn):
 
     return response
 
-token = test_generate_token()
+token = generate_token()
 isbn = "9781449325862"
 
 add_book_to_user(token, isbn)

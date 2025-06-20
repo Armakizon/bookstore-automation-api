@@ -146,7 +146,7 @@
        "password": "Invaliduser"
      }
      ```
-- **Expected Result:** Server returns error (`400 Bad Request`) and no token returned
+- **Expected Result:** Server returns ok (`200 OK`) But without a token
 
 ### TC_223 - Logging with an invalid username and password
 

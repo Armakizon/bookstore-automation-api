@@ -1,5 +1,5 @@
 import requests
-from test_generate_token import test_generate_token
+from generate_token import generate_token
 
 
 

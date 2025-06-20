@@ -1,6 +1,6 @@
 import requests
 
-def test_generate_token():
+def generate_token():
     url = "https://demoqa.com/Account/v1/GenerateToken"
     payload = {
         "userName": "validusername123",

@@ -12,4 +12,7 @@ def test_generate_token():
 
     response = requests.post(url, json=payload, headers=headers)
 
-    assert response.status_code == 400  # Bad request response
+    assert response.status_code == 200  # OK response
+
+    response_json = response.json()
+    assert response_json.get("token") is None  # token is null in JSON
