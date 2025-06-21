@@ -30,8 +30,8 @@ This report will be different from usual test report, since the focus is on crea
 |--------------|------------------------------------------------------------------|---------|--------------------------------------|
 | TC_112       | searching for a book (invalid ISBN)                              | Passed  | Token returned successfully          |
 | TC_121       | searching for a book (invalid ISBN)  		                  | Passed  | Error message received               |
-| TC_221       | Generate Auth Token (valid username or password)                 | Passed  | User created with userId             |
-| TC_222       | Generate Auth Token (invalid username or password)               | Passed  | User created with userId  	   |
+| TC_221       | Generate Auth Token (valid username or password)                 | Passed  | User created with userID             |
+| TC_222       | Generate Auth Token (invalid username or password)               | Passed  | User created with userID  	   |
 | TC_230       | Add book to booklist 				        	  | Failed  | Check out B220 and B230 for more info|
 | TC_231       | Add multiple books to booklist   			          | Failed  | Check out B220 and B230 for more info|
 | TC_232       | Add invalid book to booklist  					  | Failed  | Check out B220 and B230 for more info|
