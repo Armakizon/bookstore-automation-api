@@ -1,5 +1,5 @@
 import requests
-from generate_token import generate_token
+from helpers.generate_token import generate_token
 
 def add_book_to_user(token):
     url = "https://demoqa.com/BookStore/v1/Books"

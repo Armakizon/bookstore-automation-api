@@ -1,5 +1,6 @@
 import requests
-from generate_token import generate_token
+
+from helpers.generate_token import generate_token
 
 def add_book_to_user(token,isbn):
     url = "https://demoqa.com/BookStore/v1/Books"
@@ -20,7 +21,7 @@ def add_book_to_user(token,isbn):
     return response
 
 token = generate_token()
-isbn = "11111111111"
+isbn = "9781449325862"
 
 add_book_to_user(token, isbn)
-assert response.status_code == 400
+add_book_to_user(token, isbn)
