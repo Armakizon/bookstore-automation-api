@@ -9,7 +9,7 @@ Currently all test cases are also able to be tested through the api
 
 ## For tracability test cases will be classified with the following rules:
 
-TC_XYZ
+**TC_XYZ**
 
 - X is the user story of the test case
 - Y is the acceptence criteria of the user story the test case pretaining to

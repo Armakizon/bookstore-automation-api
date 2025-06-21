@@ -4,9 +4,9 @@ __Objective:__ To verify the functionality of the DemoQA bookstore, and to autom
 
 __Scope:__ Testing will include both the API and the user site experience. Since this is a mockup in terms of web experience the following subjects are in the scope
 
-1. account creation
-2. account logging in
-3. book searching 
+1. Account creation
+2. Account logging in
+3. Book searching 
 4. Modifying the booklist
 
 And API testing of whichever endpoints available within the scope noted above
