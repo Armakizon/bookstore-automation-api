@@ -43,21 +43,23 @@ This report will be different from usual test report, since the focus is on crea
 - Book addition endpoint worked correctly using valid token and user ID. However, Bug B220 makes the script unable to test consistently
 - Deletion of books failed due to API returning unauthorized error on user ID validation. Furthermore makes TC230-233 impossible to test. 
 
-## 10. Recommendations  
+## 8. Recommendations  
 - Investigate and fix user ID validation on book deletion endpoint.  
 - Enhance API to return user ID on token validation or provide dedicated user info endpoint.
 
-## 11. Conclusion  
+## 9. Conclusion  
 The core functionalities of user authentication and book addition are working as expected. However, issues with user ID retrieval and book deletion require resolution before full test automation can be implemented.\
 For now you can workaround the problem by signing in and out and manually deleting the booklist through the site, however full automation is currently impossible.
 
-## 12. Appendix  
+## 10. Appendix  
 - Test data:  
   - Valid username: `validusername123`  
   - Valid password: `Validpassword123!`  
   - User ID used: `c200d043-997c-4e94-99cd-2038a80a6f16`  
   - Valid ISBNs: `9781449325862`, `9781449331818`
+
 Can be also found in testware/test data.md
+
 
 - References:  
   - [Bookstore API Swagger Documentation](https://demoqa.com/swagger/)

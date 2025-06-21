@@ -4,13 +4,13 @@
 - **Tested with:** Firefox, Google Chrome
 - **Date:** 2025-06-20
 
-##URL the error occurs in
+## URL the Error Occurs in
 https://demoqa.com/profile
 
-##Prerequisites
+## Prerequisites
 
-Be logged in
-TC_230.py 
+- Be logged in
+- TC_230.py 
 
 ## Steps to Reproduce
 1. Open: "https://demoqa.com/profile"
