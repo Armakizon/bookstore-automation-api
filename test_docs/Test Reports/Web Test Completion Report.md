@@ -7,17 +7,14 @@ This report will be different from usual test report, since the focus is on crea
 - OS: Windows 10  
 - Python version: 3.12  
 - API base URL: https://demoqa.com  
-- Tools: `requests` library for HTTP requests, pytest for test automation
+- Tools: pytest and selenium for test automation
 
 ## 3. Test Dates  
 - Start Date: 2025-06-20  
 - End Date: 2025-06-20
 
 ## 4. Test Objectives  
-- Validate token generation for valid and invalid users  
-- Verify user creation and retrieval of user ID  
-- Test adding a book to the user's collection  
-- Test deletion of all books from the user's collection
+- Validate basic user actions like logging in and searching for books  
 
 ## 5. Tested Features  
 - `POST /Account/v1/GenerateToken`  
@@ -26,32 +23,25 @@ This report will be different from usual test report, since the focus is on crea
 - `DELETE /BookStore/v1/Books`
 
 ## 6. Test Scripts Working
-| Test Case ID | Description                                                      | Status  | Remarks                     	   |
-|--------------|------------------------------------------------------------------|---------|--------------------------------------|
-| TC_112       | searching for a book (invalid ISBN)                              | Passed  | Token returned successfully          |
-| TC_121       | searching for a book (invalid ISBN)  		                  | Passed  | Error message received               |
-| TC_221       | Generate Auth Token (valid username or password)                 | Passed  | User created with userId             |
-| TC_222       | Generate Auth Token (invalid username or password)               | Passed  | User created with userId  	   |
-| TC_230       | Add book to booklist 				        	  | Failed  | Check out B220 and B230 for more info|
-| TC_231       | Add multiple books to booklist   			          | Failed  | Check out B220 and B230 for more info|
-| TC_232       | Add invalid book to booklist  					  | Failed  | Check out B220 and B230 for more info|
-| TC_233       | Add duplicate book to booklist 				  | Failed  | Check out B220 and B230 for more info|
+| Test Case ID | Description                                                      | Status  | Remarks                     	  				     |
+|--------------|------------------------------------------------------------------|---------|------------------------------------------------------------------------|
+| TC_110       | Searching for a book (full title)                                | Passed  |          			 					     |
+| TC_111       | Searching for a book (partial match)  		                  | Passed  |              		 					     |
+| TC_120       | Clicking on a book gives more info       		          | Failed  | Check out B120 for info  	       				             |
+| TC_220       | Logging in (valid account)          			          | Passed  | Depends on the device the add on the site might block the login button |
+| TC_223       | Logging in (invalid account)			        	  | Passed  | Depends on the device the add on the site might block the login button |
 
 ## 7. Test Results  
-- All token generation and user creation endpoints returned expected results.  
-- Book searching endpoint works as expected.
-- Book addition endpoint worked correctly using valid token and user ID. However, Bug B220 makes the script unable to test consistently
-- Deletion of books failed due to API returning unauthorized error on user ID validation. Furthermore makes TC230-233 impossible to test. 
+- Searching for books works as intended
+- Clicking on book for more info direct the user into a blank page, B120 bug report was made for more information, script cannot automate until bug is fixed.
 
-## 10. Recommendations  
-- Investigate and fix user ID validation on book deletion endpoint.  
-- Enhance API to return user ID on token validation or provide dedicated user info endpoint.
+## 8. Recommendations  
+- None
 
-## 11. Conclusion  
-The core functionalities of user authentication and book addition are working as expected. However, issues with user ID retrieval and book deletion require resolution before full test automation can be implemented.\
-For now you can workaround the problem by signing in and out and manually deleting the booklist through the site, however full automation is currently impossible.
+## 9. Conclusion  
+Most core functionalities work, however there are some bugs and some tests cannot be automated (account creating becuause of the captcha).
 
-## 12. Appendix  
+## 10. Appendix  
 - Test data:  
   - Valid username: `validusername123`  
   - Valid password: `Validpassword123!`  
