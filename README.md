@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a **api and quality assurance automation suite** for the [DemoQA Bookstore](https://demoqa.com/swagger). It includes automated test cases for both positive and negative scenarios, focusing on functionality, validation, API and user flow coverage.
+This project is a **API and quality assurance automation suite** for the [DemoQA Bookstore](https://demoqa.com/swagger). It includes automated test cases for both positive and negative scenarios, focusing on functionality, validation, API and user flow coverage.
 
 The goal of this project is to demonstrate real-world QA skills, including:
 
