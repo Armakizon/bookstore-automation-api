@@ -39,5 +39,5 @@ The goal of this project is to demonstrate real-world QA skills, including:
 
 ## Contact
 
-Created by **Shaked Diba** QA enthusiast seeking an entry-level role in tech.  
+Created by **Shaked Diba** Automation enthusiast seeking an entry-level role in tech.  
 Feel free to connect via [LinkedIn](https://www.linkedin.com/in/shaked-diba-8a843b2a3/) or visit [GitHub](https://github.com/Armakizon).
